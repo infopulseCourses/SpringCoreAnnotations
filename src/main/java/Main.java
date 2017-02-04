@@ -12,11 +12,9 @@ import org.springframework.context.annotation.Configuration;
 public class Main {
 
     public static void main(String[] args) {
-       ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
 
         AirPlane airPlane = context.getBean(AirPlane.class);
         System.out.println(airPlane.getPilot() == airPlane.getStewart());
     }
-
-
 }
